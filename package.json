@@ -1,0 +1,22 @@
+{
+  "name": "docker-echo-label",
+  "version": "1.0.0",
+  "description": "docker echo label",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "up": "./node_modules/.bin/nodemon entry.js  -e js,pug,html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eagle7410/__REPOSITORY__.git"
+  },
+  "author": "Igor Stcherbina <verycooleagle@gmail.com> (http://github.com/eagle7410)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.16.3",
+    "nodemon": "1.18.7",
+    "reload": "2.3.1",
+    "redis-clustr": "1.6.0",
+    "pug": "2.0.3"
+  }
+}

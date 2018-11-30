@@ -1,0 +1,19 @@
+version: '3'
+services:
+  communication:
+    build: .
+    container_name: COMMUNICATION
+    command: npm run up
+    volumes:
+      - ./src:/usr/app/src
+    environment:
+      - SERVER_HOST=100.0.16.1 100.0.16.2 100.0.16.3 100.0.16.4 100.0.16.5 100.0.16.6
+    ports:
+      - "6068:80"
+      - "9856:9856"  # Hot front reload
+    networks :
+      - dockerrediscluster_redis_net
+
+networks:
+  dockerrediscluster_redis_net:
+    external: true
