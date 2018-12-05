@@ -4,7 +4,25 @@ html(lang='en')
         script(type='text/javascript', src='/reload/reload.js')
         meta(charset='UTF-8')
         title DESCRIPTION
+        style(type="text/css").
+            .mysqlParam {
+                margin: 5px;
+                font-weight: bold;
+            }
     body
         h1 Developer Igor Stcherbina
         h3 Redis cluster config
         pre= SERVER_HOST
+        h3 Mysql config
+        div Mysql VERSION is
+            span(class="mysqlParam")=MYSQL_VERSION
+        div PORT is
+            span(class="mysqlParam")=MYSQL_CONFIG.port
+        div HOST is
+            span(class="mysqlParam")=MYSQL_CONFIG.host
+        div USER is
+            span(class="mysqlParam")=MYSQL_CONFIG.user
+        div PASS is
+            span(class="mysqlParam")=MYSQL_CONFIG.password
+        div Database is
+            span(class="mysqlParam")=MYSQL_CONFIG.database

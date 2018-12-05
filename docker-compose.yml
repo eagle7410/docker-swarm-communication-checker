@@ -8,12 +8,20 @@ services:
       - ./src:/usr/app/src
     environment:
       - SERVER_HOST=100.0.16.1 100.0.16.2 100.0.16.3 100.0.16.4 100.0.16.5 100.0.16.6
+      - MYSQL_PORT=3310
+      - MYSQL_HOST=172.17.0.1
+      - MYSQL_USERNAME=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_DATABASE=crmgate
     ports:
-      - "6068:80"
+      - "6068:6080"
       - "9856:9856"  # Hot front reload
     networks :
       - dockerrediscluster_redis_net
+      - dockermysqlcluster_mysql_net
 
 networks:
+  dockermysqlcluster_mysql_net :
+    external: true
   dockerrediscluster_redis_net:
     external: true

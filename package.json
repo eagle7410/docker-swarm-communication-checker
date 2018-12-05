@@ -14,9 +14,12 @@
   "license": "MIT",
   "dependencies": {
     "express": "4.16.3",
+    "morgan": "1.9.1",
+    "mysql2": "1.6.1",
     "nodemon": "1.18.7",
-    "reload": "2.3.1",
+    "pug": "2.0.3",
     "redis-clustr": "1.6.0",
-    "pug": "2.0.3"
+    "reload": "2.3.1",
+    "winston": "2.4.0"
   }
 }
