@@ -21,7 +21,7 @@ services:
       - dockermysqlcluster_mysql_net
 
 networks:
-  dockermysqlcluster_mysql_net :
+  dockermysqlcluster_mysql_net:
     external: true
   dockerrediscluster_redis_net:
     external: true
