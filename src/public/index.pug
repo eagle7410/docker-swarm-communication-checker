@@ -11,8 +11,22 @@ html(lang='en')
             }
     body
         h1 Developer Igor Stcherbina
+        h3 REDIS_IS_CLUSTER
+        pre= REDIS_IS_CLUSTER
         h3 Redis cluster config
-        pre= SERVER_HOST
+        div servers is
+            span(class="mysqlParam")=REDIS_CONFIG.servers
+        div prefix is
+            span(class="mysqlParam")=REDIS_CONFIG.prefix
+        div password is
+            span(class="mysqlParam")=REDIS_CONFIG.password
+        div login is
+            span(class="mysqlParam")=REDIS_CONFIG.login
+        div host is
+            span(class="mysqlParam")=REDIS_CONFIG.host
+        div port is
+            span(class="mysqlParam")=REDIS_CONFIG.port
+
         h3 Mysql config
         div Mysql VERSION is
             span(class="mysqlParam")=MYSQL_VERSION
@@ -26,3 +40,4 @@ html(lang='en')
             span(class="mysqlParam")=MYSQL_CONFIG.password
         div Database is
             span(class="mysqlParam")=MYSQL_CONFIG.database
+

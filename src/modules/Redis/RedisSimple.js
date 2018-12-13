@@ -3,9 +3,22 @@ const RedisInterface = require('./RedisInterface');
 
 class RedisSimple extends RedisInterface {
 	constructor (config) {
-		super();
+		super(config);
 		const {port, host} = config;
-		this._provider = redis.createClient({port, host});
+		this.port = port;
+		this.host = host;
+		this._provider = this.newClient;
+	}
+
+	get configClient () {
+		return {
+			port : this.port,
+			host : this.host,
+		};
+	}
+
+	get newClient () {
+		return redis.createClient(this.configClient);
 	}
 }
 
